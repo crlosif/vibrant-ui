@@ -28,7 +28,7 @@ export const WavyText = ({
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 200,
       },
@@ -37,7 +37,7 @@ export const WavyText = ({
       opacity: 0,
       y: 20,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 200,
       },
@@ -50,8 +50,8 @@ export const WavyText = ({
       y: 0,
       transition: {
         duration: 0.4,
-        type: "tween",
-        ease: "easeOut",
+        type: "tween" as const,
+        ease: "easeOut" as const,
       },
     },
     hover: (i: number) => ({
@@ -60,7 +60,7 @@ export const WavyText = ({
         duration: 0.8,
         repeat: Infinity,
         repeatType: "reverse" as const,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         delay: i * 0.05,
       },
     }),
